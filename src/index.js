@@ -161,7 +161,7 @@ function createElementReconfirm (properties) {
 
 function removeElementReconfirm () {
   const target = document.getElementById('react-confirm-alert')
-  unmountComponentAtNode(target)
+  setTimeout(function(){ unmountComponentAtNode(target); }, 0);//https://github.com/facebook/react/issues/6232#issuecomment-259006498
   target.parentNode.removeChild(target)
 }
 
