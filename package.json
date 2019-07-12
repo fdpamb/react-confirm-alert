@@ -11,7 +11,7 @@
     "clean": "rimraf lib",
     "build": "npm run clean && cross-env NODE_ENV=production babel src --out-dir lib && npm run build:demo",
     "build:demo": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -71,9 +71,5 @@
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
   }
 }
